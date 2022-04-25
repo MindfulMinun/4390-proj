@@ -29,7 +29,6 @@ class UDPServer {
       
       int port = receivePacket.getPort();
       //initial connection to server 
-      //System.out.println(sentence);
       if (!receivedUsername)
       { //format the username to uppercase using help code
         response = sentence.toUpperCase();
@@ -81,10 +80,7 @@ public static double performMath(String expression) {
     // Match the expression against the pattern
     // The pattern must match the entire expression, so nothing before or after the expression is allowed (except whitespace)
     boolean hasMatch = mtch.matches();
-
-    System.out.println(expression);
-    System.out.println(hasMatch);
-
+    
     // We could throw an error here, but I'm just returning zero for now.
     if (!hasMatch) return 0;
 
