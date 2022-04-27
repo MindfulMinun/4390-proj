@@ -36,10 +36,10 @@ class UDPServer {
       Matcher mtch = ptrn.matcher(sentence);
       receivedEquation = mtch.matches();
       //check if the packet is the user requesting the connection to close
-      Pattern p = Pattern.compile("[a-zA-Z]+:close");
+      Pattern p = Pattern.compile(".*:close");
       Matcher m = p.matcher(sentence);
       userTerminated = m.matches();
-
+	  
       if (!receivedEquation && !userTerminated)
       { 
           //add to the number of connected users to keep track of when to close the server
